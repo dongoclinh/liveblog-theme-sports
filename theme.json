@@ -1,0 +1,21 @@
+{
+    "label": "Sports Theme",
+    "name": "sports",
+    "version": "1.0.96",
+    "author": "Aleksandar Jelicic <aleksandar.jelicic@sourcefabric.org>",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:liveblog/lb-theme-sports.git"
+    },
+    "license": "AGPL-3.0",
+    "extends": "classic",
+    "devStyles": [
+        "styles/embed.css"
+    ],
+    "styles": [
+        "dist/styles.min.css"
+    ],
+    "devScripts": [],
+    "scripts": [],
+    "options": []
+}

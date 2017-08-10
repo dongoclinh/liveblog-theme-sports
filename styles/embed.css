@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	background-color: transparent;
+}
+
+body article {
+	font-size: 18px;
+}
+
+body article blockquote {
+	margin-left: 0px;
+}
+
+article blockquote p:before {
+	font-size: 60px;
+	font-family: Georgia;
+	font-weight: bold;
+	opacity: 0.4;
+	top: 10px;
+	left: -70px;
+}
+
+body article blockquote h4 {
+	text-align: right;
+}
+
+body article blockquote h4:before {
+	content: " - ";
+}
+
+body .description {
+	font-size: 18px;
+}
+
+body .lb-gallery {
+	margin-left: 0px;
+}
+
+body .lb-timeline {
+	border-top: 0px;
+}
+
+body .lb-posts .lb-post {
+	padding-left: 140px;
+}
+
+body .load-new-posts {
+	font-size: 18px;
+}
+
+body .lb-article-comment {
+	position: relative;
+}
+
+body .lb-article-comment article:before {
+	position: absolute;
+	display: block;
+	content: " ";
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAdCAYAAAAkXAW5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJEOTI3NzdBNjBCMjExRTdCNERDRjlDMzc1REVGM0JBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJEOTI3NzdCNjBCMjExRTdCNERDRjlDMzc1REVGM0JBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkQ5Mjc3Nzg2MEIyMTFFN0I0RENGOUMzNzVERUYzQkEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MkQ5Mjc3Nzk2MEIyMTFFN0I0RENGOUMzNzVERUYzQkEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5DlFytAAABGUlEQVR42mJcuGCJKgMDwxIgNmOgPzgFxDEsQGI5VMALiL/T0QGcQNwMsh/kCGMg9olPiNlO72AAxgITkNrCBOV/ZRgYALaXiWEQgFFHjDpi1BGjjhh1xKgjRh1BiSP+A7HoANkPsvc/qGW1FYh7ga0cJSD9E4vCe8BW1ya0FpEWkHKj0AHsQJwDsh/kiHgg7gLiJKgEOpAHWpoFdMh0JDFQo7gPiB9R4AiQh3cCcSkx7cAKIP4PxNFIYglA/IFuCRMYAh1AqgmIFwEtDh2w3AF0SD2Q6gbipUCH+EGFf1DLESwkqK0EYn4gXg3EK6jpCKLLCWBogLJyFhAvA+K4ASusoA5JgTpk4EpMoEP+AqlEIN5ELUcABBgASoNISYTasvQAAAAASUVORK5CYII=);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 33px;
+	height: 29px;
+	top: 10px;
+	left: -70px;
+}
+
+body .lb-posts .lb-mainitem-play-by-play_commentary, body .lb-posts .lb-mainitem-scorecard_with {
+	padding-left: 0px;
+}
+
+body .lb-post {
+	padding: 40px 0px;
+	border-bottom: 1px solid #eee;
+}
+
+body .lb-post-highlighted {
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+body .lb-post-highlighted i {
+	display: none;
+}
+
+body .lb-post-highlighted:before, body .lb-post-highlighted:after {
+	position: absolute;
+	display: block;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	background: #86c2d6;
+}
+
+body .lb-post-highlighted:before {
+	top: 0px;
+}
+
+body .lb-post-highlighted:after {
+	bottom: 0px;
+}
+
+body .item--embed__title {
+	margin-bottom: 0px;
+}
+
+body .item--embed__title a {
+	font-weight: 400;
+	text-decoration: none;
+}
+
+body .item--embed__description {
+	padding-top: 4px;
+}
+
+body .lb-timeline__header {
+	padding: 0px;
+}
+
+body .lb-timeline__header h1 {
+	margin-bottom: 5px;
+}
+
+body .pin-posts .lb-post {
+	background: transparent;
+}
+
+.lb-timeline .livestream .pin-posts .lb-post:first-child {
+	border-top: none !important;
+}
+
+body .pin-drawer {
+	background: transparent;
+}
+
+body .pin-drawer-info {
+	font-size: 13px;
+	font-weight: 400;
+	color: #333;
+	padding: 5px 0px;
+	margin: 0px;
+}
+
+body .pin-drawer-button {
+	width: 68px;
+	height: auto;
+	margin-top: -8px;
+	margin-left: -34px;
+	box-shadow: none;
+}
+
+body .pin-drawer-button i {
+	font-size: 28px;
+	color: #d5d5d5;
+}
+
+body .show-author-avatar .lb-author, .show-author-avatar .lb-item {
+	margin-left: 0px;
+}
+
+body .header-bar {
+	background: transparent;
+    border-top: none;
+    border-bottom: 1px solid #eee;
+    margin-top: 40px;
+    padding: 10px 0px 10px 0px;
+}
+
+body .sorting-bar__order--active, .sorting-bar__order:hover {
+	border-bottom: 1px solid #333;
+	padding-bottom: 0px;
+}
+
+body .sorting-bar__order {
+	margin: 0px 20px;
+}
+
+body .sorting-bar__title, body .sorting-bar__order, body .header-bar__actions .btn {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	line-height: 135%;
+	color: #333;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+body .header-bar__actions .btn {
+	background: transparent;
+	border-bottom: 1px solid transparent;
+	padding: 0px 5px;
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+body .header-bar__actions .btn:hover {
+	border-bottom: 1px solid #333;
+	padding-bottom: 0;
+}
+
+/* Custom post css */
+
+body .scorecard-top span.team-score {
+	font-size: 90px;
+	font-weight: 700;
+}
+
+body .team-score-colon {
+	margin: 0px 5px;
+}
+
+body .scorecard-top span.team-name {
+	font-size: 34px;
+	font-weight: 700;
+	margin-top: 0px;
+}
+
+body .scorecard-top .scorecard-top__scorers {
+	font-size: 16px;
+}
+
+body .scorecard-top .scorecard-top__scorers li {
+	margin-bottom: 2px;
+}
+
+body .scorecard-top__info {
+	font-size: 16px;
+	opacity: 0.6;
+	margin-top: 10px;
+}
+
+body .commentary__minuteInput {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+body .commentary__textInput, body .commentary__icon {
+	padding-left: 40px;
+}
+
+body .statPerc__resultWrap {
+	display: flex;
+	flex-direction: column;
+}
+
+body .statPerc__resultBarWrap {
+	margin: 15px 0px 10px 0px;
+	order: 1;
+}
+
+body .statPerc__resultScore {
+	font-size: 24px;
+	order: 0;
+}
+
+body .statPerc__nameInput {
+	font-weight: 400;
+}
+
+@media (max-width: 650px) {
+	body lb-dropdown>div>div.dropdown-display>span, body lb-dropdown>div>div.dropdown-list>div>div {
+		font-size: 14px;
+	}
+	body .item--embed__illustration {
+		margin-right: 0px;
+	}
+	body .lb-posts .lb-post {
+		padding-left: 0px;
+	}
+	body .scorecard-top span.team-score {
+		font-size: 48px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	body .scorecard-top .scorecard-top__scorers {
+		display: none;
+	}
+	body .scorecard-top span.team-name {
+		font-size: 24px;
+	}
+	body .scorecard-top__info {
+		font-size: 14px;
+		text-align: center;
+	    align-items: center;
+	}
+	body .commentary__item {
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	body .commentary__icon, body .commentary__textInput {
+		padding: 0px;
+	}
+	body .commentary__icon {
+		margin: 5px 0px;
+	}
+}
