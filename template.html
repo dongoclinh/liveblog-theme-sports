@@ -31,11 +31,21 @@
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='newest_first'}"
-                    ng-click="timeline.orderBy('newest_first')" translate>Newest first</div>
+                    ng-click="timeline.orderBy('newest_first')" translate>Newest</div>
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='oldest_first'}"
-                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest first</div>
+                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest</div>
+                <div
+                    class="toggleHighlights"
+                    ng-if="timeline.settings.hasHighlights"
+                    ng-class="{'active': timeline.highlightsOnly}"
+                    ng-click="timeline.toggleHighlighsOnly()"
+                    only-title="{{ 'Show highlighted post only' | translate }}"
+                    all-title="{{ 'Show all posts'| translate }}"
+                    title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
+                    <span>Key events</span>
+                </div>
             </div>
             <div class="sorting-bar__orders-mobile">
                 <lb-dropdown placeholder="{{ 'Sort by:' | translate }}" list="timeline.sortOptions"
@@ -43,16 +53,16 @@
             </div>
         </div>
         <div class="header-bar__actions">
-            <div 
-                class="toggleHighlights"
-                ng-if="timeline.settings.hasHighlights"
-                ng-class="{'active': timeline.highlightsOnly}"
-                ng-click="timeline.toggleHighlighsOnly()"
-                only-title="{{ 'Show highlighted post only' | translate }}"
-                all-title="{{ 'Show all posts'| translate }}"
-                title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
-                <i class="icon-star icon--orange"></i> 
-            </div>
+          <div
+              class="toggleHighlights"
+              ng-if="timeline.settings.hasHighlights"
+              ng-class="{'active': timeline.highlightsOnly}"
+              ng-click="timeline.toggleHighlighsOnly()"
+              only-title="{{ 'Show highlighted post only' | translate }}"
+              all-title="{{ 'Show all posts'| translate }}"
+              title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
+              <i class="icon-star icon--orange"></i>
+          </div>
             <button
                 ng-if="timeline.settings.canComment"
                 class="btn comment ng-cloak"
@@ -61,7 +71,7 @@
         </div>
         <div class="header-bar__logo">
             <img ng-if="timeline.output.logo_url" ng-src="{{ timeline.output.logo_url }}"/>
-            <a ng-if="!timeline.output.logo_url" href="https://www.liveblog.pro" target="_blank">  
+            <a ng-if="!timeline.output.logo_url" href="https://www.liveblog.pro" target="_blank">
                 <img ng-src="{{ timeline.templateDir}}images/lb-logo.svg"/>
             </a>
         </div>
@@ -95,7 +105,7 @@
 
                 <div ng-if="timeline.stickyPagesManager.allPosts().length && !timeline.loading"
                     class="pin-drawer" ng-cloak>
-                    
+
                     <div class="pin-drawer-info"
                          ng-if="timeline.stickyPagesManager.hideSticky"
                          translate translate-n="timeline.stickyPagesManager.allPosts().length"

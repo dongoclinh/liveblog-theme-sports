@@ -19,7 +19,7 @@ article blockquote p:before {
 	font-size: 60px;
 	font-family: Georgia;
 	font-weight: bold;
-	opacity: 0.4;
+	opacity: 0.6;
 	top: 10px;
 	left: -70px;
 }
@@ -45,7 +45,7 @@ body .lb-timeline {
 }
 
 body .lb-posts .lb-post {
-	padding-left: 140px;
+	padding-left: 160px;
 }
 
 body .load-new-posts {
@@ -69,41 +69,25 @@ body .lb-article-comment article:before {
 	left: -70px;
 }
 
-body .lb-posts .lb-mainitem-play-by-play_commentary, body .lb-posts .lb-mainitem-scorecard_with {
-	padding-left: 0px;
+body .lb-posts .lb-mainitem-play-by-play_commentary, body .lb-posts .lb-mainitem-scorecard {
+	padding-left: 10px;
+}
+
+body .lb-posts .lb-article-play-by-play_commentary .lb-author, body .lb-posts .lb-article-scorecard .lb-author {
+	margin-left: 150px;
 }
 
 body .lb-post {
-	padding: 40px 0px;
+	padding: 30px 0px;
 	border-bottom: 1px solid #eee;
 }
 
+body .highlighted-lb_post {
+	background: #f7f7f7;
+}
+
 body .lb-post-highlighted {
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-}
-
-body .lb-post-highlighted i {
 	display: none;
-}
-
-body .lb-post-highlighted:before, body .lb-post-highlighted:after {
-	position: absolute;
-	display: block;
-	content: " ";
-	width: 100%;
-	height: 1px;
-	background: #86c2d6;
-}
-
-body .lb-post-highlighted:before {
-	top: 0px;
-}
-
-body .lb-post-highlighted:after {
-	bottom: 0px;
 }
 
 body .item--embed__title {
@@ -129,6 +113,10 @@ body .lb-timeline__header h1 {
 
 body .pin-posts .lb-post {
 	background: transparent;
+}
+
+body .lb-updated-date {
+	display: none;
 }
 
 .lb-timeline .livestream .pin-posts .lb-post:first-child {
@@ -160,8 +148,38 @@ body .pin-drawer-button i {
 	color: #d5d5d5;
 }
 
-body .show-author-avatar .lb-author, .show-author-avatar .lb-item {
+body .show-author-avatar .lb-item {
 	margin-left: 0px;
+}
+
+body .lb-author, body .show-author-avatar .lb-author {
+	color: #555;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-bottom: -10px;
+}
+
+body .lb-author__date, body .lb-author__name {
+	font-size: 12px;
+	margin-right: 20px;
+}
+
+body .lb-author__comment {
+	display: none;
+}
+
+body .lb-author__avatar {
+	position: relative;
+	width: 22px;
+	height: 22px;
+	left: auto;
+	float: right;
+}
+
+body .lb-author__date {
+	padding-right: 20px;
+	margin-right: 0px;
 }
 
 body .header-bar {
@@ -179,6 +197,10 @@ body .sorting-bar__order--active, .sorting-bar__order:hover {
 
 body .sorting-bar__order {
 	margin: 0px 20px;
+}
+
+body .header-bar__actions, body .header-bar__logo {
+	top: 8px;
 }
 
 body .sorting-bar__title, body .sorting-bar__order, body .header-bar__actions .btn {
@@ -201,6 +223,19 @@ body .header-bar__actions .btn {
 body .header-bar__actions .btn:hover {
 	border-bottom: 1px solid #333;
 	padding-bottom: 0;
+}
+
+body .header-bar__actions .toggleHighlights  {
+	display: none;
+}
+
+body .toggleHighlights {
+	margin-top: -4px;
+}
+
+body .toggleHighlights.active {
+	background-color: #f7f7f7;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
 }
 
 /* Custom post css */
@@ -240,7 +275,7 @@ body .commentary__minuteInput {
 }
 
 body .commentary__textInput, body .commentary__icon {
-	padding-left: 40px;
+	padding-left: 35px;
 }
 
 body .statPerc__resultWrap {
@@ -266,11 +301,29 @@ body .statPerc__nameInput {
 	body lb-dropdown>div>div.dropdown-display>span, body lb-dropdown>div>div.dropdown-list>div>div {
 		font-size: 14px;
 	}
+	body article ul, body article ol {
+		display: inline-block;
+		text-align: left;
+	}
 	body .item--embed__illustration {
 		margin-right: 0px;
 	}
 	body .lb-posts .lb-post {
+		text-align: center;
 		padding-left: 0px;
+	}
+	article blockquote p:before {
+		position: relative;
+		display: block;
+		top: auto;
+		left: auto;
+		margin: 0 auto;
+	}
+	body article blockquote h4 {
+		text-align: center;
+	}
+	body .show-author-avatar .lb-author {
+		display: none;
 	}
 	body .scorecard-top span.team-score {
 		font-size: 48px;
@@ -288,15 +341,34 @@ body .statPerc__nameInput {
 		text-align: center;
 	    align-items: center;
 	}
+
 	body .commentary__item {
 		align-items: center;
 		flex-direction: column;
 		text-align: center;
 	}
+	body .commentary__minuteInput {
+		flex: 1 0 30px;
+	}
 	body .commentary__icon, body .commentary__textInput {
 		padding: 0px;
 	}
-	body .commentary__icon {
-		margin: 5px 0px;
+	body .commentary__textInput {
+		margin: 10px 0px;
 	}
+	body .commentary__icon {
+		flex: 0 0 40px;
+		background-position: center;
+		order: 3;
+	}
+}
+
+@media (max-width: 600px) {
+	body .header-bar__actions, body .header-bar__logo {
+		top: 16px;
+	}
+	body .header-bar__actions .toggleHighlights {
+		display: inline-block;
+	}
+
 }

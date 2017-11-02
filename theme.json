@@ -1,7 +1,7 @@
 {
     "label": "Sports Theme",
     "name": "sports",
-    "version": "1.0.96",
+    "version": "1.0.172",
     "author": "Aleksandar Jelicic <aleksandar.jelicic@sourcefabric.org>",
     "repository": {
         "type": "git",
@@ -15,7 +15,11 @@
     "styles": [
         "dist/styles.min.css"
     ],
-    "devScripts": [],
-    "scripts": [],
+    "devScripts": [
+        "dist/scripts.min.js"
+    ],
+    "scripts": [
+        "dist/scripts.min.js"
+    ],
     "options": []
 }
