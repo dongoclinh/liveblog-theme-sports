@@ -1,6 +1,6 @@
-# Election Theme
+# Sports Theme
 
-*FREE TYPE TEMPLATES* for elections:
+*FREE TYPE TEMPLATES* for sport:
 
 | <a href="https://raw.githubusercontent.com/liveblog/lb-theme-elections/master/custompost-play-by-play.html">Play by Play Commentary</a> |
 | <a href="https://raw.githubusercontent.com/liveblog/lb-theme-elections/master/custompost-statistic-in-charts.html">Statistic in Charts</a> |
