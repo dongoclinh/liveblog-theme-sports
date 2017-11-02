@@ -1,0 +1,234 @@
+<div class="statPerc">
+
+    <div class="statPerc__itemWrap colorWrap">
+
+      <div class="statPerc__item">
+        <label hide-render="">Home color</label>
+        <input class="statPerc__colorPickerValue1"  placeholder="Home color"  name="$stat.color1">
+      </div>
+
+      <div class="statPerc__item">
+        <label hide-render="">Away color</label>
+        <input class="statPerc__colorPickerValue2"  placeholder="Away color"  name="$stat.color2">
+      </div>
+
+    </div>
+
+    <div class="statPerc__itemWrap">
+
+    	<div class="statPerc__name statPerc__item">
+			<div class="statPerc__nameInput">
+				<label class="legend--padding-top" for="stat.name1" hide-render="">Statistic name</label>
+				<input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name1">
+			</div>
+			<div class="statPerc__nameIcon">
+				<label class="legend--padding-top" for="stat.img1" hide-render="">Statistic icon</label>
+				<input image="$stat.img1"/>
+			</div>
+		</div>
+        <div class="statPerc__item statPerc__result statPerc__result--home statPerc__result--perc">
+            <div class="statPerc__resultWrap">
+                <div class="statPerc__resultBarWrap">
+                    <div class="statPerc__resultBar statPerc__resultBar--perc home" style="width: 0%"></div>
+                </div>
+                <label class="legend--padding-top" for="stat.score1" hide-render="">Home result (e.g. 72%)</label>
+                <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score1">
+            </div>
+        </div>
+        <div class="statPerc__item statPerc__result statPerc__result--away statPerc__result--perc">
+            <div class="statPerc__resultWrap">
+                <div class="statPerc__resultBarWrap">
+                    <div class="statPerc__resultBar statPerc__resultBar--perc away" style="width: 0%"></div>
+                </div>
+                <label class="legend--padding-top" for="stat.score2" hide-render="">Away result (e.g. 28%)</label>
+                <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score2">
+            </div>
+        </div>
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number">
+    	<div class="statPerc__name statPerc__item">
+			<div class="statPerc__nameInput">
+				<label class="legend--padding-top" for="stat.name2" hide-render="">Statistic name</label>
+				<input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name2">
+			</div>
+			<div class="statPerc__nameIcon">
+				<label class="legend--padding-top" for="stat.img2" hide-render="">Statistic icon</label>
+				<input image="$stat.img2"/>
+			</div>
+		</div>
+        <div class="statPerc__item statPerc__result statPerc__result--home">
+            <div class="statPerc__resultWrap statPerc__resultWrap--number">
+                <div class="statPerc__resultBarWrap">
+                    <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+                </div>
+                <label class="legend--padding-top" for="stat.score3" hide-render="">Home result (e.g. 2)</label>
+                <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score3">
+            </div>
+        </div>
+        <div class="statPerc__item statPerc__result statPerc__result--away">
+            <div class="statPerc__resultWrap statPerc__resultWrap--number">
+                <div class="statPerc__resultBarWrap">
+                    <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+                </div>
+                <label class="legend--padding-top" for="stat.score4" hide-render="">Away result (e.g. 1)</label>
+                <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score4">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style type="text/css">
+.statPerc {
+}
+.statPerc__itemWrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+  margin-bottom: 20px;
+}
+.editor-holder .statPerc__itemWrap {
+	flex-wrap: wrap;
+}
+.colorWrap {
+  display: none;
+}
+.editor-holder .colorWrap {
+  display: flex;
+}
+.statPerc__item {
+	flex: 0 1 170px;
+	max-width: 50%;
+	text-align: center;
+	box-sizing: border-box;
+}
+.editor-holder .statPerc__item {
+	flex: 0 1 48%;
+	text-align: left;
+}
+
+.statPerc__result--home {
+	/*padding-right: 10px;*/
+	order: 0;
+}
+.statPerc__result--away {
+	/*padding-left: 10px;*/
+	order: 2;
+}
+.statPerc__resultBarWrap {
+	position: relative;
+	display: block;
+	margin: 10px 0px;
+	background: #d9d9d9;
+	width: 100%;
+	height: 8px;
+}
+.editor-holder .statPerc__resultBarWrap {
+	display: none;
+}
+.statPerc__resultBar {
+	height: 8px;
+	display: block;
+	width: 0%;
+	background: #6dc77a;
+}
+.statPerc__colorPicker {
+	display: none;
+}
+.editor-holder .statPerc__colorPicker {
+	display: block;
+}
+.statPerc__name {
+	flex: 0 1 33%;
+	max-width: 33%;
+	order: 1;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+  padding: 0px 10px;
+}
+.editor-holder .statPerc__name {
+	flex: 0 0 100%;
+	max-width: 100%;
+	order: 0;
+  padding: 0px;
+}
+.statPerc__nameInput {
+	flex: 0 0 100%;
+	order: 1;
+}
+.editor-holder .statPerc__nameInput {
+	order: 0;
+}
+.statPerc__nameIcon {
+	flex: 1 1 auto;
+}
+.editor-holder .statPerc__nameIcon {
+	flex: 0 0 auto;
+}
+.statPerc__nameIcon img {
+	max-height: 30px;
+	width: auto !important;
+}
+
+.editor-holder .statPerc__nameIcon img {
+  max-width: 40px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.blogedit .panel--editor .content .editor-holder label.legend--padding-top {
+	padding-top: 20px !important;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+		var homeColor = $('.statPerc__colorPickerValue1').html();
+		var awayColor = $('.statPerc__colorPickerValue2').html();
+
+		$('.home').each(function() {
+			$(this).css('background-color', homeColor);
+		});
+
+		$('.away').each(function() {
+			$(this).css('background-color', awayColor);
+		});
+
+		console.log(homeColor);
+		console.log(awayColor);
+
+
+    $('.statPerc__result--perc').each(function() {
+        var value = $(this).find('.statPerc__resultScore--perc').html();
+
+				$(this).find('.statPerc__resultBar--perc').animate({
+						'width': value
+				}, 600);
+
+        console.log('value', value);
+    });
+
+    $('.statPerc__itemWrap--number').each(function() {
+
+		var number1 = parseInt($(this).find('.statPerc__resultScore1').html()),
+		number2 = parseInt($(this).find('.statPerc__resultScore2').html());
+
+		var actual2 = (number2 * 100)/(number2+number1);
+		var actual1 = 100 - actual2;
+
+	 	$(this).find('.statPerc__resultBar1').animate({
+            'width': actual1 + "%"
+        }, 600);
+
+	 	$(this).find('.statPerc__resultBar2').animate({
+            'width': actual2 + "%"
+        }, 600);
+	});
+});
+
+</script>
