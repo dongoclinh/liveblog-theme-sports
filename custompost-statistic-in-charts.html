@@ -63,7 +63,18 @@
 		display: inline-block;
 		position: relative;
 	}
-
+	.pie:before {
+    content: " ";
+    display: block;
+    width: 1px;
+    height: calc(100% - 20px);
+    background: #eaeef1;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    z-index: 1;
+    margin-left: -1px;
+	}
 	.pie:after {
 		align-items: center;
 		background: #FFF;
