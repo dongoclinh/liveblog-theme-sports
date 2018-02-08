@@ -31,21 +31,11 @@
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='newest_first'}"
-                    ng-click="timeline.orderBy('newest_first')" translate>Newest</div>
+                    ng-click="timeline.orderBy('newest_first')" translate>Newest first</div>
                 <div
                     class="sorting-bar__order"
                     ng-class="{'sorting-bar__order--active': timeline.pagesManager.order()=='oldest_first'}"
-                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest</div>
-                <div
-                    class="toggleHighlights"
-                    ng-if="timeline.settings.hasHighlights"
-                    ng-class="{'active': timeline.highlightsOnly}"
-                    ng-click="timeline.toggleHighlighsOnly()"
-                    only-title="{{ 'Show highlighted post only' | translate }}"
-                    all-title="{{ 'Show all posts'| translate }}"
-                    title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
-                    <span>Key events</span>
-                </div>
+                    ng-click="timeline.orderBy('oldest_first')" translate>Oldest first</div>
             </div>
             <div class="sorting-bar__orders-mobile">
                 <lb-dropdown placeholder="{{ 'Sort by:' | translate }}" list="timeline.sortOptions"
@@ -53,16 +43,16 @@
             </div>
         </div>
         <div class="header-bar__actions">
-          <div
-              class="toggleHighlights"
-              ng-if="timeline.settings.hasHighlights"
-              ng-class="{'active': timeline.highlightsOnly}"
-              ng-click="timeline.toggleHighlighsOnly()"
-              only-title="{{ 'Show highlighted post only' | translate }}"
-              all-title="{{ 'Show all posts'| translate }}"
-              title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
-              <i class="icon-star icon--orange"></i>
-          </div>
+            <div 
+                class="toggleHighlights"
+                ng-if="timeline.settings.hasHighlights"
+                ng-class="{'active': timeline.highlightsOnly}"
+                ng-click="timeline.toggleHighlighsOnly()"
+                only-title="{{ 'Show highlighted post only' | translate }}"
+                all-title="{{ 'Show all posts'| translate }}"
+                title="{{ timeline.highlightsOnly? 'Show all posts': 'Show highlighted post only' | translate }}">
+                <span>Key events</span>
+            </div>
             <button
                 ng-if="timeline.settings.canComment"
                 class="btn comment ng-cloak"
@@ -71,7 +61,7 @@
         </div>
         <div class="header-bar__logo">
             <img ng-if="timeline.output.logo_url" ng-src="{{ timeline.output.logo_url }}"/>
-            <a ng-if="!timeline.output.logo_url" href="https://www.liveblog.pro" target="_blank">
+            <a ng-if="!timeline.output.logo_url" href="https://www.liveblog.pro" target="_blank">  
                 <img ng-src="{{ timeline.templateDir}}images/lb-logo.svg"/>
             </a>
         </div>
@@ -80,7 +70,7 @@
         <div lb-comments data-comment="timeline.comment"></div>
         <div
             class="lb-post emtpy-message" ng-cloak
-            ng-show="timeline.pagesManager.allPosts().length + timeline.stickyPagesManager.allPosts().length< 1 && !timeline.loading">
+            ng-show="timeline.pagesManager.allPosts().length + (timeline.settings.livestream? 0 :timeline.stickyPagesManager.allPosts().length)< 1 && !timeline.loading">
             <div translate>No posts for now.</div>
         </div>
         <section
@@ -105,7 +95,7 @@
 
                 <div ng-if="timeline.stickyPagesManager.allPosts().length && !timeline.loading"
                     class="pin-drawer" ng-cloak>
-
+                    
                     <div class="pin-drawer-info"
                          ng-if="timeline.stickyPagesManager.hideSticky"
                          translate translate-n="timeline.stickyPagesManager.allPosts().length"
@@ -129,3 +119,13 @@
         <div class="loading" ng-show="timeline.loading" translate>Loading</div>
     </div>
 </div>
+<script src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<script>
+    embedly("defaults", {
+        cards: {
+            key: '82645d4daa7742cc891c21506d28235e',
+            align: 'left',
+            chrome: 0
+        }
+    });
+</script>

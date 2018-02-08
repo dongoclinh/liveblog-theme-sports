@@ -3,19 +3,42 @@
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 400;
 	background-color: transparent;
+}
+
+body button {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	background: #5ea9c8;
+	border-radius: 2px;
+}
+
+body button:hover {
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #5598b4;
+	border: 3px solid #5598b4;
 }
 
 body article {
 	font-size: 18px;
 }
 
+body article p {
+	margin: 0.5em 0;
+}
+
 body article blockquote {
 	margin-left: 0px;
 }
 
-article blockquote p:before {
+body article blockquote p {
+	font-size: 1.15em;
+}
+
+body article blockquote p:before {
 	font-size: 60px;
 	font-family: Georgia;
 	font-weight: bold;
@@ -30,6 +53,10 @@ body article blockquote h4 {
 
 body article blockquote h4:before {
 	content: " - ";
+}
+
+body .btn:hover, body .btn-primary:hover {
+	box-shadow: none;
 }
 
 body .description {
@@ -73,7 +100,7 @@ body .lb-posts .lb-mainitem-play-by-play_commentary, body .lb-posts .lb-mainitem
 	padding-left: 10px;
 }
 
-body .lb-posts .lb-article-play-by-play_commentary .lb-author, body .lb-posts .lb-article-scorecard .lb-author {
+body .lb-posts .lb-mainitem-play-by-play_commentary .lb-author, body .lb-posts .lb-mainitem-scorecard .lb-author {
 	margin-left: 150px;
 }
 
@@ -83,7 +110,7 @@ body .lb-post {
 }
 
 body .highlighted-lb_post {
-	background: #f7f7f7;
+	background: #f9f9f9;
 }
 
 body .lb-post-highlighted {
@@ -154,7 +181,7 @@ body .show-author-avatar .lb-item {
 
 body .lb-author, body .show-author-avatar .lb-author {
 	color: #555;
-	display: inline-block;
+	display: flex;
 	margin-top: 5px;
 	margin-left: 0px;
 	margin-bottom: -10px;
@@ -173,13 +200,14 @@ body .lb-author__avatar {
 	position: relative;
 	width: 22px;
 	height: 22px;
+	margin-right: 20px;
 	left: auto;
-	float: right;
 }
 
 body .lb-author__date {
-	padding-right: 20px;
+	padding-right: 10px;
 	margin-right: 0px;
+	order: 3;
 }
 
 body .header-bar {
@@ -221,12 +249,13 @@ body .header-bar__actions .btn {
 }
 
 body .header-bar__actions .btn:hover {
+	border: 0px;
 	border-bottom: 1px solid #333;
 	padding-bottom: 0;
 }
 
 body .header-bar__actions .toggleHighlights  {
-	display: none;
+	
 }
 
 body .toggleHighlights {
@@ -236,6 +265,14 @@ body .toggleHighlights {
 body .toggleHighlights.active {
 	background-color: #f7f7f7;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.1);
+}
+
+.modal .content label {
+	font-size: 14px;
+}
+
+.modal .modal-footer .btn {
+	border: 0px;
 }
 
 /* Custom post css */
@@ -264,9 +301,15 @@ body .scorecard-top .scorecard-top__scorers li {
 }
 
 body .scorecard-top__info {
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 400;
 	opacity: 0.6;
 	margin-top: 10px;
+}
+
+body .commentary__item.Goal {
+	color: #00b6ff;
+    font-weight: 700;
 }
 
 body .commentary__minuteInput {
