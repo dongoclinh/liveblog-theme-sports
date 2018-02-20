@@ -95,7 +95,7 @@
 		display: none;
 	}
 
-	svg {
+	.pieWrap svg {
 		display: block;
 		width: 160px;
 		height: 160px;
@@ -105,7 +105,7 @@
 		position: relative;
 	}
 
-	circle {
+	.pieWrap circle {
 		fill: #E0E0DA;
 		stroke: #6dc77a;
 		stroke-width: 10;
@@ -220,8 +220,8 @@
 		var homeColorPie = $('.color__itemColor1').html();
 		var awayColorPie = $('.color__itemColor2').html();
 
-		$('circle').css('fill', homeColorPie);
-		$('circle').css('stroke', awayColorPie);
+		$('.pieWrap circle').css('fill', homeColorPie);
+		$('.pieWrap circle').css('stroke', awayColorPie);
 
 		$('.pieItem').each(function() {
 

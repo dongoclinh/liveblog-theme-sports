@@ -307,8 +307,12 @@ body .scorecard-top__info {
 	margin-top: 10px;
 }
 
-body .commentary__item.Goal {
-	color: #00b6ff;
+body .commentary__item.Goal .commentary__minuteInput {
+	color: #00b06e;
+}
+
+body .commentary__item.Goal .commentary__text {
+	color: #6dc77a;
     font-weight: 700;
 }
 
