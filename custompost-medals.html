@@ -1,8 +1,11 @@
 <div class="medals">
-	<div class="medals__text">
-		<label for="medals.text" hide-render="">Text</label>
-    	<input class="medals__nameText" placeholder="Text" name="$medals.text">
-	</div>
+
+	<label for="medals.headline" hide-render="">Headline</label>
+    <input  class="medals__headline" placeholder=" " name="$medals.headline">
+
+    <label for="medals.text" hide-render="">Additional text</label>
+    <input class="medals__subheadline" placeholder=" " name="$medals.text">
+
 	<div class="medals__item">
 		
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -99,43 +102,50 @@
 
 <style type="text/css">
 
-.medals {
+div.medals {
 
 }
 
-.medals__text {
-	margin-bottom: 15px;
+.medals span.medals__headline {
+	display: block;
+	font-size: 1.06em;
+	font-weight: 700;
+	margin-bottom: .7em;
 }
 
-.medals__item {
+div.medals__item {
 	font-size: 16px;
 	display: flex;
 	align-items: center;
-	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
-.medals__item svg {
+div.medals__item svg {
 	flex: 0 0 28px;
 	max-height: 33px;
 }
 
-.medals__result {
+div.medals__name {
+	flex: 1 1 auto;
+}
+
+div.medals__result {
 	font-weight: 300;
 }
 
-.medals__item > * {
+div.medals__item > * {
 	margin-right: 15px;
 }
 
-.editor-holder .medals__item {
+.editor-holder div.medals__item {
 	justify-content: space-between;
 }
 
-.editor-holder .medals__item svg {
+.editor-holder div.medals__item svg {
 	flex: 0 0 28px;
 }
 
-.editor-holder .medals__item > * {
+.editor-holder div.medals__item > * {
 	flex: 0 1 45%;
 	margin-right: 0px;
 }
