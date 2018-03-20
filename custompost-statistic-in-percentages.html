@@ -79,7 +79,6 @@
 </div>
 
 
-
 <style type="text/css">
 .statPerc {
 }
@@ -135,6 +134,7 @@
 	display: block;
 	width: 0%;
 	background: #6dc77a;
+  transition: width 2s;
 }
 .statPerc__colorPicker {
 	display: none;
@@ -187,48 +187,56 @@
 }
 </style>
 <script type="text/javascript">
-$(document).ready(function() {
-		var homeColor = $('.statPerc__colorPickerValue1').html();
-		var awayColor = $('.statPerc__colorPickerValue2').html();
 
-		$('.home').each(function() {
-			$(this).css('background-color', homeColor);
-		});
+  // checking if function already exists
+  if (typeof statPerc_init != 'function') {
+    function statPerc_init() {
+        // what if there are two freetypes on one page? Everyting would be overwritten. Html should get some kind of id that we would pass to function.
 
-		$('.away').each(function() {
-			$(this).css('background-color', awayColor);
-		});
-
-		console.log(homeColor);
-		console.log(awayColor);
+        var homeColor = document.querySelectorAll(".statPerc__colorPickerValue1")[0].innerHTML;
+        var awayColor = document.querySelectorAll(".statPerc__colorPickerValue2")[0].innerHTML;
 
 
-    $('.statPerc__result--perc').each(function() {
-        var value = $(this).find('.statPerc__resultScore--perc').html();
+        // these two classes below (.home, .away) are too generic
+        document.querySelectorAll('.home').forEach(function(item, i){
+          item.style.backgroundColor = homeColor;
+        });
 
-				$(this).find('.statPerc__resultBar--perc').animate({
-						'width': value
-				}, 600);
+        document.querySelectorAll('.away').forEach(function(item, i){
+          item.style.backgroundColor = awayColor;
+        });
 
-        console.log('value', value);
+
+
+
+        document.querySelectorAll('.statPerc__result--perc').forEach(function(item, i) {
+            var value = item.querySelectorAll('.statPerc__resultScore--perc')[0].innerHTML;
+
+            item.querySelectorAll('.statPerc__resultBar--perc')[0].style.width = value;
+
+        });
+
+        document.querySelectorAll('.statPerc__itemWrap--number').forEach(function(item, i) {
+
+        var number1 = parseInt(item.querySelectorAll('.statPerc__resultScore1')[0].innerHTML),
+        number2 = parseInt(item.querySelectorAll('.statPerc__resultScore2')[0].innerHTML);
+
+        var actual2 = (number2 * 100)/(number2+number1);
+        var actual1 = 100 - actual2;
+
+        item.querySelectorAll('.statPerc__resultBar1')[0].style.width = actual1 + '%';
+        item.querySelectorAll('.statPerc__resultBar2')[0].style.width = actual2 + '%';
+      });
+    };
+  }
+
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    setTimeout(statPerc_init, 500);
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(statPerc_init, 500);
     });
+  }
 
-    $('.statPerc__itemWrap--number').each(function() {
-
-		var number1 = parseInt($(this).find('.statPerc__resultScore1').html()),
-		number2 = parseInt($(this).find('.statPerc__resultScore2').html());
-
-		var actual2 = (number2 * 100)/(number2+number1);
-		var actual1 = 100 - actual2;
-
-	 	$(this).find('.statPerc__resultBar1').animate({
-            'width': actual1 + "%"
-        }, 600);
-
-	 	$(this).find('.statPerc__resultBar2').animate({
-            'width': actual2 + "%"
-        }, 600);
-	});
-});
 
 </script>
