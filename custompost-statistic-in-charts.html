@@ -215,22 +215,35 @@
 </div>
 
 <script>
-	$(document).ready(function() {
+  if (typeof statPie_init != 'function') {
+    function statPie_init() {
 
-		var homeColorPie = $('.color__itemColor1').html();
-		var awayColorPie = $('.color__itemColor2').html();
+      var homeColorPie = document.querySelectorAll(".color__itemColor1")[0].innerHTML;
+      var awayColorPie = document.querySelectorAll(".color__itemColor2")[0].innerHTML;
 
-		$('.pieWrap circle').css('fill', homeColorPie);
-		$('.pieWrap circle').css('stroke', awayColorPie);
+      document.querySelectorAll('.pieWrap circle').forEach(function(item, i){
+	item.style.fill = homeColorPie;
+      });
+      document.querySelectorAll('.pieWrap circle').forEach(function(item, i){
+	item.style.stroke = awayColorPie;
+      });
 
-		$('.pieItem').each(function() {
+      document.querySelectorAll('.pieItem').forEach(function(item, i) {
 
-			var chart1 = parseInt($(this).find('.pieValue__itemScore1').html()),
-			chart2 = parseInt($(this).find('.pieValue__itemScore2').html());
+	var chart1 = parseInt(item.querySelectorAll('.pieValue__itemScore1')[0].innerHTML),
+	chart2 = parseInt(item.querySelectorAll('.pieValue__itemScore2')[0].innerHTML);
 
-			var actual = (chart2 * 100)/(chart2+chart1);
+	var actual = (chart2 * 100)/(chart2+chart1);
 
-			$(this).find('circle').css('stroke-dasharray', actual + ' 100');
-		});
-	});
+	item.querySelectorAll('circle')[0].style.strokeDasharray = actual + ' 100';
+      });
+    };
+  }
+
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    statPie_init();
+  } else {
+    document.addEventListener('DOMContentLoaded', statPie_init);
+  }
+
 </script>
