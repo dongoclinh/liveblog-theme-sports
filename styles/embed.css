@@ -26,6 +26,16 @@ body article {
 	font-size: 18px;
 }
 
+body article h4, body article h5 {
+	font-family: 'Source Sans Pro', sans-serif;	
+	font-size: 20px;
+    font-weight: 700;
+}
+
+body article h5 {
+	font-size: 18px;
+}
+
 body article p {
 	margin: 0.5em 0;
 }
@@ -48,6 +58,7 @@ body article blockquote p:before {
 }
 
 body article blockquote h4 {
+	font-weight: 400;
 	text-align: right;
 }
 
@@ -321,7 +332,7 @@ body .commentary .commentary__minuteInput {
 	font-weight: 300;
 }
 
-body .commentary .commentary__textInput, body .commentary__icon {
+body .commentary .commentary__textInput, body .commentary .commentary__icon {
 	padding-left: 35px;
 }
 
@@ -359,7 +370,7 @@ body .statPerc .statPerc__nameInput {
 		text-align: center;
 		padding-left: 0px;
 	}
-	article blockquote p:before {
+	body article blockquote p:before {
 		position: relative;
 		display: block;
 		top: auto;
