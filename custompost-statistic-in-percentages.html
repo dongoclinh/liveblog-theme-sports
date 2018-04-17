@@ -14,75 +14,230 @@
 
     </div>
 
-    <div class="statPerc__itemWrap">
-
-    	<div class="statPerc__name statPerc__item">
-			<div class="statPerc__nameInput">
-				<label class="legend--padding-top" for="stat.name1" hide-render="">Statistic name</label>
-				<input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name1">
-			</div>
-			<div class="statPerc__nameIcon">
-				<label class="legend--padding-top" for="stat.img1" hide-render="">Statistic icon</label>
-				<input image="$stat.img1"/>
-			</div>
-		</div>
-        <div class="statPerc__item statPerc__result statPerc__result--home statPerc__result--perc">
-            <div class="statPerc__resultWrap">
-                <div class="statPerc__resultBarWrap">
-                    <div class="statPerc__resultBar statPerc__resultBar--perc home" style="width: 0%"></div>
-                </div>
-                <label class="legend--padding-top" for="stat.score1" hide-render="">Home result (e.g. 72%)</label>
-                <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score1">
-            </div>
-        </div>
-        <div class="statPerc__item statPerc__result statPerc__result--away statPerc__result--perc">
-            <div class="statPerc__resultWrap">
-                <div class="statPerc__resultBarWrap">
-                    <div class="statPerc__resultBar statPerc__resultBar--perc away" style="width: 0%"></div>
-                </div>
-                <label class="legend--padding-top" for="stat.score2" hide-render="">Away result (e.g. 28%)</label>
-                <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score2">
-            </div>
-        </div>
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display1" hide-render="">Show Statistic 1</label>
+      <input select="$stat.display1" options=",none;" hide-render="">
     </div>
 
-    <div class="statPerc__itemWrap statPerc__itemWrap--number">
+    <div class="statPerc__itemWrap" style="display: @stat.display1">
+
     	<div class="statPerc__name statPerc__item">
-			<div class="statPerc__nameInput">
-				<label class="legend--padding-top" for="stat.name2" hide-render="">Statistic name</label>
-				<input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name2">
-			</div>
-			<div class="statPerc__nameIcon">
-				<label class="legend--padding-top" for="stat.img2" hide-render="">Statistic icon</label>
-				<input image="$stat.img2"/>
-			</div>
-		</div>
-        <div class="statPerc__item statPerc__result statPerc__result--home">
-            <div class="statPerc__resultWrap statPerc__resultWrap--number">
-                <div class="statPerc__resultBarWrap">
-                    <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
-                </div>
-                <label class="legend--padding-top" for="stat.score3" hide-render="">Home result (e.g. 2)</label>
-                <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score3">
-            </div>
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name1" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name1">
         </div>
-        <div class="statPerc__item statPerc__result statPerc__result--away">
-            <div class="statPerc__resultWrap statPerc__resultWrap--number">
-                <div class="statPerc__resultBarWrap">
-                    <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
-                </div>
-                <label class="legend--padding-top" for="stat.score4" hide-render="">Away result (e.g. 1)</label>
-                <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score4">
-            </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img1" hide-render="">Statistic icon</label>
+          <input image="$stat.img1"/>
         </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home statPerc__result--perc">
+        <div class="statPerc__resultWrap">
+          <div class="statPerc__resultBarWrap">
+              <div class="statPerc__resultBar statPerc__resultBar--perc home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score1" hide-render="">Home result (e.g. 72%)</label>
+          <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score1">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away statPerc__result--perc">
+        <div class="statPerc__resultWrap">
+          <div class="statPerc__resultBarWrap">
+              <div class="statPerc__resultBar statPerc__resultBar--perc away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score2" hide-render="">Away result (e.g. 28%)</label>
+          <input class="statPerc__resultScore statPerc__resultScore--perc"  placeholder="Home result"  name="$stat.score2">
+        </div>
+      </div>
     </div>
+
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display2" hide-render="">Show Statistic 2</label>
+      <input select="$stat.display2" options=",none;" hide-render="">
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number" style="display: @stat.display2">
+    	<div class="statPerc__name statPerc__item">
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name2" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name2">
+        </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img2" hide-render="">Statistic icon</label>
+          <input image="$stat.img2"/>
+        </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score3" hide-render="">Home result (e.g. 2)</label>
+          <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score3">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score4" hide-render="">Away result (e.g. 1)</label>
+          <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score4">
+        </div>
+      </div>
+    </div>
+
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display3" hide-render="">Show Statistic 3</label>
+      <input select="$stat.display3" options=",none;" hide-render="">
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number" style="display: @stat.display3">
+    	<div class="statPerc__name statPerc__item">
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name3" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name3">
+        </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img3" hide-render="">Statistic icon</label>
+          <input image="$stat.img3"/>
+        </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score5" hide-render="">Home result (e.g. 2)</label>
+          <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score5">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score6" hide-render="">Away result (e.g. 1)</label>
+          <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score6">
+        </div>
+      </div>
+    </div>
+
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display4" hide-render="">Show Statistic 4</label>
+      <input select="$stat.display4" options=",none;" hide-render="">
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number" style="display: @stat.display4">
+    	<div class="statPerc__name statPerc__item">
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name4" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name4">
+        </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img4" hide-render="">Statistic icon</label>
+          <input image="$stat.img4"/>
+        </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score7" hide-render="">Home result (e.g. 2)</label>
+          <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score7">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score8" hide-render="">Away result (e.g. 1)</label>
+          <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score8">
+        </div>
+      </div>
+    </div>
+
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display5" hide-render="">Show Statistic 5</label>
+      <input select="$stat.display5" options=",none;" hide-render="">
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number" style="display: @stat.display5">
+    	<div class="statPerc__name statPerc__item">
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name5" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name5">
+        </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img5" hide-render="">Statistic icon</label>
+          <input image="$stat.img5"/>
+        </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score9" hide-render="">Home result (e.g. 2)</label>
+          <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score9">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score10" hide-render="">Away result (e.g. 1)</label>
+          <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score10">
+        </div>
+      </div>
+    </div>
+
+    <div class="statPerc__hide-item">
+      <label class="legend--padding-top" for="stat.display6" hide-render="">Show Statistic 6</label>
+      <input select="$stat.display6" options=",none;" hide-render="">
+    </div>
+
+    <div class="statPerc__itemWrap statPerc__itemWrap--number" style="display: @stat.display6">
+    	<div class="statPerc__name statPerc__item">
+        <div class="statPerc__nameInput">
+          <label class="legend--padding-top" for="stat.name6" hide-render="">Statistic name</label>
+          <input class="statPerc__nameText" placeholder="Statistic name" name="$stat.name6">
+        </div>
+        <div class="statPerc__nameIcon">
+          <label class="legend--padding-top" for="stat.img6" hide-render="">Statistic icon</label>
+          <input image="$stat.img6"/>
+        </div>
+		  </div>
+      <div class="statPerc__item statPerc__result statPerc__result--home">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar1 home" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score11" hide-render="">Home result (e.g. 2)</label>
+          <input class="statPerc__resultScore statPerc__resultScore1"  placeholder="Home result"  name="$stat.score11">
+        </div>
+      </div>
+      <div class="statPerc__item statPerc__result statPerc__result--away">
+        <div class="statPerc__resultWrap statPerc__resultWrap--number">
+          <div class="statPerc__resultBarWrap">
+            <div class="statPerc__resultBar statPerc__resultBar2 away" style="width: 0%"></div>
+          </div>
+          <label class="legend--padding-top" for="stat.score12" hide-render="">Away result (e.g. 1)</label>
+          <input class="statPerc__resultScore statPerc__resultScore2"  placeholder="Home result"  name="$stat.score12">
+        </div>
+      </div>
+    </div>
+
 </div>
 
 
 <style type="text/css">
 .statPerc {
 }
-.statPerc__itemWrap {
+.statPerc .statPerc__itemWrap {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -90,35 +245,44 @@
 	align-items: flex-end;
   margin-bottom: 20px;
 }
-.editor-holder .statPerc__itemWrap {
+.editor-holder .statPerc .statPerc__itemWrap {
 	flex-wrap: wrap;
 }
-.colorWrap {
+.statPerc .colorWrap {
   display: none;
 }
-.editor-holder .colorWrap {
+.editor-holder .statPerc .colorWrap {
   display: flex;
 }
-.statPerc__item {
+.statPerc .statPerc__item {
 	flex: 0 1 170px;
 	max-width: 50%;
 	text-align: center;
 	box-sizing: border-box;
 }
-.editor-holder .statPerc__item {
+.editor-holder .statPerc .statPerc__item {
 	flex: 0 1 48%;
 	text-align: left;
 }
 
-.statPerc__result--home {
+.statPerc .statPerc__resultWrap {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.editor-holder .statPerc .statPerc__resultWrap {
+  display: block;
+}
+
+.statPerc .statPerc__result--home {
 	/*padding-right: 10px;*/
 	order: 0;
 }
-.statPerc__result--away {
+.statPerc .statPerc__result--away {
 	/*padding-left: 10px;*/
 	order: 2;
 }
-.statPerc__resultBarWrap {
+.statPerc .statPerc__resultBarWrap {
 	position: relative;
 	display: block;
 	margin: 10px 0px;
@@ -126,23 +290,23 @@
 	width: 100%;
 	height: 8px;
 }
-.editor-holder .statPerc__resultBarWrap {
+.editor-holder .statPerc .statPerc__resultBarWrap {
 	display: none;
 }
-.statPerc__resultBar {
+.statPerc .statPerc__resultBar {
 	height: 8px;
 	display: block;
 	width: 0%;
 	background: #6dc77a;
   transition: width 2s;
 }
-.statPerc__colorPicker {
+.statPerc .statPerc__colorPicker {
 	display: none;
 }
-.editor-holder .statPerc__colorPicker {
+.editor-holder .statPerc .statPerc__colorPicker {
 	display: block;
 }
-.statPerc__name {
+.statPerc .statPerc__name {
 	flex: 0 1 33%;
 	max-width: 33%;
 	order: 1;
@@ -152,37 +316,37 @@
 	flex-wrap: wrap;
   padding: 0px 10px;
 }
-.editor-holder .statPerc__name {
+.editor-holder .statPerc .statPerc__name {
 	flex: 0 0 100%;
 	max-width: 100%;
 	order: 0;
   padding: 0px;
 }
-.statPerc__nameInput {
+.statPerc .statPerc__nameInput {
 	flex: 0 0 100%;
 	order: 1;
 }
-.editor-holder .statPerc__nameInput {
+.editor-holder .statPerc .statPerc__nameInput {
 	order: 0;
 }
-.statPerc__nameIcon {
+.statPerc .statPerc__nameIcon {
 	flex: 1 1 auto;
 }
-.editor-holder .statPerc__nameIcon {
+.editor-holder .statPerc .statPerc__nameIcon {
 	flex: 0 0 auto;
 }
-.statPerc__nameIcon img {
+.statPerc .statPerc__nameIcon img {
 	max-height: 30px;
 	width: auto !important;
 }
 
-.editor-holder .statPerc__nameIcon img {
+.editor-holder .statPerc .statPerc__nameIcon img {
   max-width: 40px;
   margin: 0 auto 10px auto;
   display: block;
 }
 
-.blogedit .panel--editor .content .editor-holder label.legend--padding-top {
+.blogedit .panel--editor .content .editor-holder .statPerc label.legend--padding-top {
 	padding-top: 20px !important;
 }
 </style>
