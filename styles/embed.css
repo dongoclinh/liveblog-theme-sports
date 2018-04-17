@@ -307,40 +307,40 @@ body .scorecard-top__info {
 	margin-top: 10px;
 }
 
-body .commentary__item.Goal .commentary__minuteInput {
+body .commentary .commentary__item.Goal .commentary__minuteInput {
 	color: #00b06e;
 }
 
-body .commentary__item.Goal .commentary__text {
+body .commentary .commentary__item.Goal .commentary__text {
 	color: #6dc77a;
     font-weight: 700;
 }
 
-body .commentary__minuteInput {
+body .commentary .commentary__minuteInput {
 	font-size: 30px;
 	font-weight: 300;
 }
 
-body .commentary__textInput, body .commentary__icon {
+body .commentary .commentary__textInput, body .commentary__icon {
 	padding-left: 35px;
 }
 
-body .statPerc__resultWrap {
+body .statPerc .statPerc__resultWrap {
 	display: flex;
 	flex-direction: column;
 }
 
-body .statPerc__resultBarWrap {
+body .statPerc .statPerc__resultBarWrap {
 	margin: 15px 0px 10px 0px;
 	order: 1;
 }
 
-body .statPerc__resultScore {
+body .statPerc .statPerc__resultScore {
 	font-size: 24px;
 	order: 0;
 }
 
-body .statPerc__nameInput {
+body .statPerc .statPerc__nameInput {
 	font-weight: 400;
 }
 
@@ -389,21 +389,21 @@ body .statPerc__nameInput {
 	    align-items: center;
 	}
 
-	body .commentary__item {
+	body .commentary .commentary__item {
 		align-items: center;
 		flex-direction: column;
 		text-align: center;
 	}
-	body .commentary__minuteInput {
+	body .commentary .commentary__minuteInput {
 		flex: 1 0 30px;
 	}
-	body .commentary__icon, body .commentary__textInput {
+	body .commentary .commentary__icon, body .commentary .commentary__textInput {
 		padding: 0px;
 	}
-	body .commentary__textInput {
+	body .commentary .commentary__textInput {
 		margin: 10px 0px;
 	}
-	body .commentary__icon {
+	body .commentary .commentary__icon {
 		flex: 0 0 40px;
 		background-position: center;
 		order: 3;

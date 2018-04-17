@@ -1,118 +1,3 @@
-<style type="text/css">
-	.pieWrap {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	.editor-holder .pieWrap  {
-		flex-direction: column;
-	}
-	.pieItem {
-		flex: 0 1 auto;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		align-items: center;
-		margin-bottom: 10px;
-	}
-	.editor-holder .pieItem {
-		align-items: stretch;
-		width: 100%;
-	}
-	.pieName {
-		text-align: center;
-		margin-bottom: 10px;
-	}
-	.editor-holder .pieName {
-		text-align: left;
-	}
-	.pieValue {
-		position: absolute;
-		width: 160px;
-		height: 160px;
-		text-align: center;
-		z-index: 1;
-		display: flex;
-	}
-	.editor-holder .pieValue {
-		position: relative;
-		width: auto;
-		height: auto;
-		flex: 1 1 auto;
-	}
-	.pieValue__item {
-		font-size: 26px;
-		flex: 1 1 auto;
-		align-self: center;
-	}
-	.editor-holder .pieValue__item {
-		text-align: left;
-		padding-right: 10px;
-	}
-	.editor-holder .pieValue__item:last-child {
-		padding-left: 10px;
-		padding-right: 0px;
-	}
-	.colorWrap {
-		display: none;
-	}
-	.editor-holder .colorWrap {
-		display: flex;
-	}
-	.pie {
-		display: inline-block;
-		position: relative;
-	}
-	.pie:before {
-    content: " ";
-    display: block;
-    width: 1px;
-    height: calc(100% - 20px);
-    background: #eaeef1;
-    position: absolute;
-    left: 50%;
-    top: 10px;
-    z-index: 1;
-    margin-left: -1px;
-	}
-	.pie:after {
-		align-items: center;
-		background: #FFF;
-		border-radius: 50%;
-		content: attr(data-value);
-		display: flex;
-		font-size: 20px;
-		font-weight: 500;
-		justify-content: center;
-		position: absolute;
-		left: 10px;
-		top: 10px;
-		height: 140px;
-		width: 140px;
-	}
-
-	.editor-holder .pie {
-		display: none;
-	}
-
-	.pieWrap svg {
-		display: block;
-		width: 160px;
-		height: 160px;
-		transform: rotate(-90deg);
-		background: #E0E0DA;
-		border-radius: 50%;
-		position: relative;
-	}
-
-	.pieWrap circle {
-		fill: #E0E0DA;
-		stroke: #6dc77a;
-		stroke-width: 10;
-	}
-</style>
-
-
 <div class="pieWrap">
 
 	<div class="colorWrap pieValue">
@@ -213,6 +98,120 @@
 		</div>
 	</div>
 </div>
+
+<style type="text/css">
+	.pieWrap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.editor-holder .pieWrap  {
+		flex-direction: column;
+	}
+	.pieWrap .pieItem {
+		flex: 0 1 auto;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	.editor-holder .pieWrap .pieItem {
+		align-items: stretch;
+		width: 100%;
+	}
+	.pieWrap .pieName {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.editor-holder .pieWrap .pieName {
+		text-align: left;
+	}
+	.pieWrap .pieValue {
+		position: absolute;
+		width: 160px;
+		height: 160px;
+		text-align: center;
+		z-index: 1;
+		display: flex;
+	}
+	.editor-holder .pieWrap .pieValue {
+		position: relative;
+		width: auto;
+		height: auto;
+		flex: 1 1 auto;
+	}
+	.pieWrap .pieValue__item {
+		font-size: 26px;
+		flex: 1 1 auto;
+		align-self: center;
+	}
+	.editor-holder .pieWrap .pieValue__item {
+		text-align: left;
+		padding-right: 10px;
+	}
+	.editor-holder .pieWrap .pieValue__item:last-child {
+		padding-left: 10px;
+		padding-right: 0px;
+	}
+	.pieWrap .colorWrap {
+		display: none;
+	}
+	.editor-holder .pieWrap .colorWrap {
+		display: flex;
+	}
+	.pieWrap .pie {
+		display: inline-block;
+		position: relative;
+	}
+	.pieWrap .pie:before {
+    content: " ";
+    display: block;
+    width: 1px;
+    height: calc(100% - 20px);
+    background: #eaeef1;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    z-index: 1;
+    margin-left: -1px;
+	}
+	.pieWrap .pie:after {
+		align-items: center;
+		background: #FFF;
+		border-radius: 50%;
+		content: attr(data-value);
+		display: flex;
+		font-size: 20px;
+		font-weight: 500;
+		justify-content: center;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		height: 140px;
+		width: 140px;
+	}
+
+	.editor-holder .pieWrap .pie {
+		display: none;
+	}
+
+	.pieWrap svg {
+		display: block;
+		width: 160px;
+		height: 160px;
+		transform: rotate(-90deg);
+		background: #E0E0DA;
+		border-radius: 50%;
+		position: relative;
+	}
+
+	.pieWrap circle {
+		fill: #E0E0DA;
+		stroke: #6dc77a;
+		stroke-width: 10;
+	}
+</style>
 
 <script>
   if (typeof statPie_init != 'function') {
