@@ -1,3 +1,5 @@
+<!-- Works with Liveblog 3.4 -->
+
 <div class="medals">
 
 	<label for="medals.headline" hide-render="">Headline</label>
@@ -106,15 +108,19 @@ div.medals {
 
 }
 
-.medals span.medals__headline {
+.medals .medals__headline {
 	display: block;
 	font-size: 1.06em;
-	font-weight: 700;
+	font-weight: bold;
 	margin-bottom: .7em;
 }
 
+.medals .medals__subheadline {
+	display: block;
+	margin-bottom: 25px;
+}
+
 div.medals__item {
-	font-size: 16px;
 	display: flex;
 	align-items: center;
 	margin-top: 15px;
@@ -127,10 +133,6 @@ div.medals__item svg {
 
 div.medals__name {
 	flex: 1 1 auto;
-}
-
-div.medals__result {
-	font-weight: 300;
 }
 
 div.medals__item > * {
